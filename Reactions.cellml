@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<model name="Reactions" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <import xlink:href="Units.cellml">
+        <units name="mol_per_m3" units_ref="mol_per_m3"/>
+        <units name="mol_per_m3_s" units_ref="mol_per_m3_s"/>
+        <units name="per_m" units_ref="per_m"/>
+        <units name="m_per_s" units_ref="m_per_s"/>
+        <units name="J_per_C" units_ref="J_per_C"/>
+        <units name="C_per_mol" units_ref="C_per_mol"/>
+        <units name="J_per_mol_K" units_ref="J_per_mol_K"/>
+        <units name="per_mol" units_ref="per_mol"/>
+        <units name="mol_per_s" units_ref="mol_per_s"/>
+    </import>
+    <!-- This Section for "simpleReactionOne" function-->
+    <!--        def comp reaction_1 as
+            var qB: mol_per_m3 {init: 0.1, pub: out};
+            var K_B: per_mol {init: 3803.6518, pub: out};
+            var r: mol_per_s {init: 0.00029926, pub: out};
+            var R: J_per_mol_K {init: 8.314};
+            var T: kelvin {init: 300};
+        enddef;-->
+    <!--        def comp reaction_2 as
+            var qB: mol_per_m3 {init: 0.2, pub: out};
+            var K_B: per_mol {init: 3003.6518, pub: out};
+            var r: mol_per_s {init: 0.001, pub: out};
+            var R: J_per_mol_K {init: 8.314};
+            var T: kelvin {init: 300};
+        enddef;-->
+    <!--        def comp reaction_3 as
+            var qB: mol_per_m3 {init: 0.3, pub: out};
+            var K_B: per_mol {init: 3203.6518, pub: out};
+            var r: mol_per_s {init: 0.0001, pub: out};
+            var R: J_per_mol_K {init: 8.314};
+            var T: kelvin {init: 300};
+        enddef;-->
+    <!--        def comp reaction_4 as
+            var qB: mol_per_m3 {init: 0.1, pub: out};
+            var K_B: per_mol {init: 2803.6518, pub: out};
+            var r: mol_per_s {init: 0.01, pub: out};
+            var R: J_per_mol_K {init: 8.314};
+            var T: kelvin {init: 300};
+        enddef;-->
+    <!-- This Section for "simpleReactionTwo" function
+ Note that the number of vars in "input" and the number of products
+ in each "reaction" must be the same.-->
+    <component name="input">
+        <variable initial_value="0.1" name="qA" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="50" name="K_A" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.2" name="qB" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="20" name="K_B" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.3" name="qC" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="10" name="K_C" public_interface="out" units="per_mol"/>
+    </component>
+    <component name="reaction_1">
+        <variable initial_value="0.02" name="qD" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="40" name="K_D" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.01" name="qE" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="30" name="K_E" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.02" name="qF" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="5" name="K_F" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.00059926" name="r" public_interface="out" units="mol_per_s"/>
+        <variable initial_value="8.314" name="R" units="J_per_mol_K"/>
+        <variable initial_value="300" name="T" units="kelvin"/>
+    </component>
+    <component name="reaction_2">
+        <variable initial_value="0.01" name="qD" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="45" name="K_D" public_interface="out" units="per_mol"/>
+        <variable initial_value="0" name="qE" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="52" name="K_E" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.01" name="qF" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="25" name="K_F" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.0059926" name="r" public_interface="out" units="mol_per_s"/>
+        <variable initial_value="8.314" name="R" units="J_per_mol_K"/>
+        <variable initial_value="300" name="T" units="kelvin"/>
+    </component>
+    <component name="reaction_3">
+        <variable initial_value="0" name="qD" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="20" name="K_D" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.02" name="qE" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="33" name="K_E" public_interface="out" units="per_mol"/>
+        <variable initial_value="0" name="qF" public_interface="out" units="mol_per_m3"/>
+        <variable initial_value="15" name="K_F" public_interface="out" units="per_mol"/>
+        <variable initial_value="0.059926" name="r" public_interface="out" units="mol_per_s"/>
+        <variable initial_value="8.314" name="R" units="J_per_mol_K"/>
+        <variable initial_value="300" name="T" units="kelvin"/>
+    </component>
+</model>
